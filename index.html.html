@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)file:///C:/Users/zoris/OneDrive/Desktop/homelander/hijoo/happybirthday.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday 🌸</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    overflow:hidden;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(180deg,#ffd6ec,#ffeef8,#fff8fc);
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+.container{
+    text-align:center;
+    z-index:2;
+}
+
+h1{
+    font-size:70px;
+    color:#ff4f9a;
+    text-shadow:
+        0 0 10px #fff,
+        0 0 20px #ffb6d9,
+        0 0 40px hotpink;
+    animation: glow 2s infinite alternate;
+}
+
+p{
+    margin-top:15px;
+    font-size:24px;
+    color:#7a2b5d;
+}
+
+@keyframes glow{
+    from{
+        transform:scale(1);
+    }
+    to{
+        transform:scale(1.05);
+    }
+}
+
+.flower{
+    position:absolute;
+    top:-60px;
+    font-size:30px;
+    animation:fall linear infinite;
+    opacity:.9;
+}
+
+@keyframes fall{
+    0%{
+        transform:translateY(-10vh) rotate(0deg);
+    }
+    100%{
+        transform:translateY(110vh) rotate(720deg);
+    }
+}
+
+/* Decorative flowers */
+.corner{
+    position:absolute;
+    font-size:120px;
+    opacity:.8;
+}
+
+.tl{top:10px;left:20px;}
+.tr{top:10px;right:20px;}
+.bl{bottom:10px;left:20px;}
+.br{bottom:10px;right:20px;}
+
+.circle{
+    position:absolute;
+    width:450px;
+    height:450px;
+    border-radius:50%;
+    background:transparent;
+    
+    box-shadow:0 0 50px rgba(255,255,255,.8);
+    z-index:1;
+}
+
+
+.name{
+ display:block;
+ margin-top:12px;
+ font-size:48px;
+ color:#ff1493;
+ text-shadow:0 0 8px #fff,0 0 18px #ffb6d9,0 0 30px hotpink;
+ font-family:"Brush Script MT",cursive;
+ white-space:nowrap;
+ overflow:hidden;
+ border-right:3px solid #ff1493;
+ width:0;
+ opacity:0;
+ animation:
+ fadeIn 1s ease forwards,
+ typing 3s steps(15,end) .6s forwards,
+ glowPulse 2s ease-in-out infinite 3.6s,
+ sparkle 1.5s linear infinite 3.6s;
+}
+@keyframes fadeIn{to{opacity:1}}
+@keyframes typing{from{width:0}to{width:15ch}}
+@keyframes glowPulse{
+0%,100%{text-shadow:0 0 8px #fff,0 0 18px #ffb6d9,0 0 30px hotpink;}
+50%{text-shadow:0 0 14px #fff,0 0 30px #ff69b4,0 0 50px #ff1493;}
+}
+@keyframes sparkle{
+0%,100%{filter:drop-shadow(0 0 0px gold)}
+50%{filter:drop-shadow(0 0 10px gold) drop-shadow(0 0 18px white)}
+}
+
+.bubu{
+    position:fixed;
+    right:40px;
+    bottom:20px;
+    font-size:120px;
+    animation:bubuFloat 3s ease-in-out infinite;
+    z-index:10;
+}
+@keyframes bubuFloat{
+ 0%,100%{transform:translateY(0) rotate(-3deg);}
+ 50%{transform:translateY(-15px) rotate(3deg);}
+}
+
+
+.love-note{max-width:700px;margin:30px auto 0;padding:20px 28px;background:rgba(255,240,248,.75);border:2px solid #ffb6d9;border-radius:20px;color:#d81b60;font-size:22px;text-align:center;box-shadow:0 0 15px #ffb6d9,0 0 35px hotpink;animation:glowNote 2s ease-in-out infinite alternate;position:relative;z-index:20}
+@keyframes glowNote{from{box-shadow:0 0 10px #ffb6d9,0 0 20px hotpink}to{box-shadow:0 0 20px #fff,0 0 40px deeppink}}
+</style>
+</head>
+
+<body>
+
+<div class="corner tl">🌸🌺</div>
+<div class="corner tr">🌸🌷</div>
+<div class="corner bl">🌼🌸</div>
+<div class="corner br">🌺🌷</div>
+
+<div class="circle"></div>
+
+<div class="container">
+    <h1>🎉 Happy Birthday! 🎂<br><span class="name">Hijab Khetran</span></h1>
+    <p>May your day bloom with happiness, dreams, and endless smiles! 🌸💖</p>
+</div>
+<div class="love-note">Hey, HappyBirthday my Love and uhhhh idk well happybirthday and stuff im not good at this -_- and love  you alot and enjoy kid while you still can...................</div>
+
+<script>
+const flowers = ["🌸","🌺","🌷","🌼","💮","🌹"];
+
+for(let i=0;i<120;i++){
+
+    let flower=document.createElement("div");
+    flower.className="flower";
+
+    flower.innerHTML=flowers[Math.floor(Math.random()*flowers.length)];
+
+    flower.style.left=Math.random()*100+"vw";
+
+    flower.style.animationDuration=
+        (5+Math.random()*10)+"s";
+
+    flower.style.animationDelay=
+        Math.random()*8+"s";
+
+    flower.style.fontSize=
+        (20+Math.random()*35)+"px";
+
+    document.body.appendChild(flower);
+}
+</script><div class="flower" style="left: 80.8525vw; animation-duration: 10.8392s; animation-delay: 5.06045s; font-size: 50.7389px;">💮</div><div class="flower" style="left: 25.4878vw; animation-duration: 5.95583s; animation-delay: 3.62815s; font-size: 44.3933px;">🌼</div><div class="flower" style="left: 86.1954vw; animation-duration: 8.91795s; animation-delay: 4.24405s; font-size: 20.454px;">🌺</div><div class="flower" style="left: 98.2184vw; animation-duration: 12.1286s; animation-delay: 0.0507717s; font-size: 38.5677px;">💮</div><div class="flower" style="left: 28.4391vw; animation-duration: 6.08059s; animation-delay: 3.23197s; font-size: 46.4631px;">🌼</div><div class="flower" style="left: 11.4043vw; animation-duration: 9.30365s; animation-delay: 3.41895s; font-size: 41.6087px;">🌸</div><div class="flower" style="left: 30.9364vw; animation-duration: 14.1737s; animation-delay: 1.35606s; font-size: 54.306px;">🌺</div><div class="flower" style="left: 69.648vw; animation-duration: 10.8365s; animation-delay: 3.35103s; font-size: 37.8441px;">🌷</div><div class="flower" style="left: 96.3541vw; animation-duration: 8.43055s; animation-delay: 7.17821s; font-size: 36.5222px;">🌺</div><div class="flower" style="left: 9.76889vw; animation-duration: 14.314s; animation-delay: 0.894307s; font-size: 28.5266px;">🌹</div><div class="flower" style="left: 69.7695vw; animation-duration: 7.79224s; animation-delay: 7.5005s; font-size: 50.4078px;">🌷</div><div class="flower" style="left: 62.2225vw; animation-duration: 6.42514s; animation-delay: 7.98244s; font-size: 54.8175px;">🌹</div><div class="flower" style="left: 3.30992vw; animation-duration: 10.1024s; animation-delay: 1.15186s; font-size: 22.778px;">🌺</div><div class="flower" style="left: 56.2809vw; animation-duration: 8.69752s; animation-delay: 7.23076s; font-size: 37.8562px;">🌺</div><div class="flower" style="left: 68.9144vw; animation-duration: 6.79673s; animation-delay: 7.59759s; font-size: 54.8522px;">🌼</div><div class="flower" style="left: 84.7046vw; animation-duration: 7.06862s; animation-delay: 2.22835s; font-size: 44.5225px;">🌸</div><div class="flower" style="left: 59.4001vw; animation-duration: 14.2014s; animation-delay: 3.68334s; font-size: 24.5681px;">🌸</div><div class="flower" style="left: 4.66145vw; animation-duration: 10.4917s; animation-delay: 6.21088s; font-size: 40.1476px;">💮</div><div class="flower" style="left: 61.1906vw; animation-duration: 7.59582s; animation-delay: 2.93927s; font-size: 38.355px;">🌷</div><div class="flower" style="left: 67.5918vw; animation-duration: 6.60759s; animation-delay: 2.52029s; font-size: 27.1619px;">🌷</div><div class="flower" style="left: 25.541vw; animation-duration: 11.0953s; animation-delay: 4.16493s; font-size: 23.2344px;">🌺</div><div class="flower" style="left: 82.6722vw; animation-duration: 9.22098s; animation-delay: 1.72266s; font-size: 43.9439px;">🌸</div><div class="flower" style="left: 20.4489vw; animation-duration: 13.7603s; animation-delay: 6.31059s; font-size: 51.7001px;">🌹</div><div class="flower" style="left: 67.988vw; animation-duration: 9.96418s; animation-delay: 6.61704s; font-size: 22.9246px;">🌺</div><div class="flower" style="left: 47.2204vw; animation-duration: 11.8896s; animation-delay: 0.892598s; font-size: 52.8431px;">🌺</div><div class="flower" style="left: 56.0999vw; animation-duration: 5.69682s; animation-delay: 0.712647s; font-size: 54.0054px;">🌼</div><div class="flower" style="left: 91.2014vw; animation-duration: 7.00902s; animation-delay: 2.09889s; font-size: 41.3266px;">🌹</div><div class="flower" style="left: 10.134vw; animation-duration: 14.0575s; animation-delay: 3.87147s; font-size: 36.7484px;">💮</div><div class="flower" style="left: 29.2513vw; animation-duration: 5.11277s; animation-delay: 4.3072s; font-size: 53.6352px;">🌸</div><div class="flower" style="left: 38.2394vw; animation-duration: 5.85775s; animation-delay: 3.6594s; font-size: 51.6233px;">🌹</div><div class="flower" style="left: 24.4644vw; animation-duration: 5.70548s; animation-delay: 7.80273s; font-size: 30.8778px;">🌺</div><div class="flower" style="left: 46.5661vw; animation-duration: 11.1053s; animation-delay: 5.57643s; font-size: 38.7582px;">🌼</div><div class="flower" style="left: 89.5655vw; animation-duration: 13.9707s; animation-delay: 5.45632s; font-size: 26.0573px;">🌷</div><div class="flower" style="left: 81.759vw; animation-duration: 6.17089s; animation-delay: 4.69523s; font-size: 41.5445px;">🌺</div><div class="flower" style="left: 3.03316vw; animation-duration: 12.1709s; animation-delay: 4.25358s; font-size: 51.3255px;">🌹</div><div class="flower" style="left: 18.5201vw; animation-duration: 9.03785s; animation-delay: 0.224252s; font-size: 49.1959px;">🌼</div><div class="flower" style="left: 6.23043vw; animation-duration: 7.52848s; animation-delay: 2.07877s; font-size: 35.6374px;">💮</div><div class="flower" style="left: 51.5716vw; animation-duration: 8.34375s; animation-delay: 3.29185s; font-size: 50.9025px;">🌸</div><div class="flower" style="left: 3.81593vw; animation-duration: 5.78192s; animation-delay: 7.19113s; font-size: 20.3317px;">🌹</div><div class="flower" style="left: 43.7433vw; animation-duration: 5.78699s; animation-delay: 3.74284s; font-size: 43.0308px;">🌼</div><div class="flower" style="left: 0.313755vw; animation-duration: 14.3837s; animation-delay: 1.73749s; font-size: 39.2px;">💮</div><div class="flower" style="left: 76.4827vw; animation-duration: 14.9048s; animation-delay: 6.94696s; font-size: 38.7219px;">🌼</div><div class="flower" style="left: 35.147vw; animation-duration: 10.423s; animation-delay: 7.28263s; font-size: 53.7292px;">🌼</div><div class="flower" style="left: 22.4708vw; animation-duration: 12.3745s; animation-delay: 2.79959s; font-size: 45.0253px;">🌺</div><div class="flower" style="left: 14.1194vw; animation-duration: 10.8863s; animation-delay: 2.77122s; font-size: 21.6632px;">🌷</div><div class="flower" style="left: 87.9594vw; animation-duration: 11.2905s; animation-delay: 2.26424s; font-size: 41.8981px;">🌷</div><div class="flower" style="left: 0.373512vw; animation-duration: 7.73817s; animation-delay: 5.98708s; font-size: 38.7115px;">🌼</div><div class="flower" style="left: 31.9503vw; animation-duration: 5.59145s; animation-delay: 6.73226s; font-size: 39.9412px;">🌼</div><div class="flower" style="left: 6.23466vw; animation-duration: 6.43802s; animation-delay: 3.98793s; font-size: 20.9584px;">💮</div><div class="flower" style="left: 20.618vw; animation-duration: 13.275s; animation-delay: 6.44923s; font-size: 39.4968px;">🌼</div><div class="flower" style="left: 69.5596vw; animation-duration: 8.87442s; animation-delay: 5.77828s; font-size: 42.294px;">🌸</div><div class="flower" style="left: 36.8286vw; animation-duration: 9.05448s; animation-delay: 7.36461s; font-size: 47.356px;">🌼</div><div class="flower" style="left: 9.66069vw; animation-duration: 9.08873s; animation-delay: 6.75337s; font-size: 31.6747px;">🌹</div><div class="flower" style="left: 76.7696vw; animation-duration: 5.7866s; animation-delay: 2.38166s; font-size: 22.2969px;">🌹</div><div class="flower" style="left: 51.0394vw; animation-duration: 11.1345s; animation-delay: 6.18118s; font-size: 31.0735px;">💮</div><div class="flower" style="left: 90.1386vw; animation-duration: 5.69769s; animation-delay: 1.49103s; font-size: 44.3945px;">💮</div><div class="flower" style="left: 41.3454vw; animation-duration: 9.71081s; animation-delay: 3.57179s; font-size: 53.1661px;">🌼</div><div class="flower" style="left: 37.8005vw; animation-duration: 11.0438s; animation-delay: 1.43663s; font-size: 22.6783px;">🌺</div><div class="flower" style="left: 67.1041vw; animation-duration: 10.4628s; animation-delay: 3.76843s; font-size: 45.3456px;">🌺</div><div class="flower" style="left: 68.1146vw; animation-duration: 5.07438s; animation-delay: 4.38024s; font-size: 23.3143px;">🌼</div><div class="flower" style="left: 84.8396vw; animation-duration: 11.2261s; animation-delay: 5.29607s; font-size: 44.9665px;">💮</div><div class="flower" style="left: 33.2993vw; animation-duration: 6.95934s; animation-delay: 7.37329s; font-size: 34.9634px;">🌼</div><div class="flower" style="left: 89.7668vw; animation-duration: 13.5404s; animation-delay: 6.7172s; font-size: 46.9029px;">🌼</div><div class="flower" style="left: 35.7076vw; animation-duration: 6.52756s; animation-delay: 0.742321s; font-size: 37.8594px;">🌹</div><div class="flower" style="left: 54.1689vw; animation-duration: 7.57197s; animation-delay: 3.33142s; font-size: 43.1665px;">🌼</div><div class="flower" style="left: 96.6837vw; animation-duration: 6.29378s; animation-delay: 1.19886s; font-size: 50.8854px;">🌸</div><div class="flower" style="left: 39.661vw; animation-duration: 9.56143s; animation-delay: 5.55143s; font-size: 51.9555px;">💮</div><div class="flower" style="left: 34.1775vw; animation-duration: 14.2475s; animation-delay: 6.55537s; font-size: 53.8319px;">💮</div><div class="flower" style="left: 67.1522vw; animation-duration: 10.3457s; animation-delay: 6.16701s; font-size: 20.2263px;">💮</div><div class="flower" style="left: 26.4561vw; animation-duration: 5.77938s; animation-delay: 1.60122s; font-size: 50.5096px;">🌹</div><div class="flower" style="left: 49.4581vw; animation-duration: 8.31751s; animation-delay: 4.45856s; font-size: 31.2469px;">🌼</div><div class="flower" style="left: 81.0618vw; animation-duration: 10.0539s; animation-delay: 4.78884s; font-size: 32.0619px;">🌷</div><div class="flower" style="left: 44.7074vw; animation-duration: 12.9894s; animation-delay: 3.49063s; font-size: 22.7039px;">🌸</div><div class="flower" style="left: 20.4575vw; animation-duration: 9.81991s; animation-delay: 4.4359s; font-size: 25.1213px;">💮</div><div class="flower" style="left: 58.069vw; animation-duration: 7.05062s; animation-delay: 5.08764s; font-size: 28.4117px;">🌺</div><div class="flower" style="left: 9.81903vw; animation-duration: 12.4035s; animation-delay: 6.25677s; font-size: 32.3096px;">🌺</div><div class="flower" style="left: 90.8104vw; animation-duration: 14.0522s; animation-delay: 3.46644s; font-size: 21.2586px;">🌷</div><div class="flower" style="left: 62.1134vw; animation-duration: 7.95069s; animation-delay: 0.75845s; font-size: 48.754px;">🌼</div><div class="flower" style="left: 8.67279vw; animation-duration: 6.34971s; animation-delay: 5.16942s; font-size: 34.383px;">💮</div><div class="flower" style="left: 10.2657vw; animation-duration: 11.4625s; animation-delay: 5.30057s; font-size: 29.2112px;">🌹</div><div class="flower" style="left: 86.8228vw; animation-duration: 14.0167s; animation-delay: 6.26236s; font-size: 33.0224px;">🌺</div><div class="flower" style="left: 12.5676vw; animation-duration: 13.4094s; animation-delay: 7.94898s; font-size: 34.4807px;">🌸</div><div class="flower" style="left: 94.4334vw; animation-duration: 9.89568s; animation-delay: 5.14945s; font-size: 50.0329px;">💮</div><div class="flower" style="left: 45.4542vw; animation-duration: 12.1387s; animation-delay: 4.34249s; font-size: 31.6884px;">💮</div><div class="flower" style="left: 63.1703vw; animation-duration: 13.9476s; animation-delay: 1.20741s; font-size: 31.7319px;">🌼</div><div class="flower" style="left: 37.7737vw; animation-duration: 8.50837s; animation-delay: 6.67532s; font-size: 50.6446px;">🌷</div><div class="flower" style="left: 5.66245vw; animation-duration: 5.39933s; animation-delay: 0.77629s; font-size: 43.6876px;">🌸</div><div class="flower" style="left: 16.0779vw; animation-duration: 12.844s; animation-delay: 4.42181s; font-size: 44.3319px;">🌷</div><div class="flower" style="left: 42.7546vw; animation-duration: 10.3514s; animation-delay: 6.59729s; font-size: 50.671px;">🌸</div><div class="flower" style="left: 71.6603vw; animation-duration: 9.84636s; animation-delay: 5.38727s; font-size: 42.3077px;">🌸</div><div class="flower" style="left: 93.7404vw; animation-duration: 14.5847s; animation-delay: 3.61186s; font-size: 48.2844px;">💮</div><div class="flower" style="left: 12.6533vw; animation-duration: 5.87971s; animation-delay: 3.09248s; font-size: 50.909px;">💮</div><div class="flower" style="left: 76.9036vw; animation-duration: 8.31442s; animation-delay: 1.84903s; font-size: 38.938px;">🌹</div><div class="flower" style="left: 11.359vw; animation-duration: 8.21359s; animation-delay: 7.69532s; font-size: 30.7738px;">🌸</div><div class="flower" style="left: 16.1124vw; animation-duration: 10.2265s; animation-delay: 3.17146s; font-size: 48.1143px;">🌺</div><div class="flower" style="left: 62.4166vw; animation-duration: 9.03845s; animation-delay: 2.75044s; font-size: 51.5698px;">🌸</div><div class="flower" style="left: 91.183vw; animation-duration: 10.5853s; animation-delay: 7.87529s; font-size: 35.4955px;">🌺</div><div class="flower" style="left: 52.5112vw; animation-duration: 5.6166s; animation-delay: 5.24878s; font-size: 32.2463px;">🌺</div><div class="flower" style="left: 74.8192vw; animation-duration: 12.5294s; animation-delay: 7.28626s; font-size: 50.4559px;">🌸</div><div class="flower" style="left: 4.47653vw; animation-duration: 5.30147s; animation-delay: 3.2275s; font-size: 41.9825px;">🌼</div><div class="flower" style="left: 58.0851vw; animation-duration: 8.06383s; animation-delay: 3.51808s; font-size: 46.9205px;">🌺</div><div class="flower" style="left: 95.7355vw; animation-duration: 14.818s; animation-delay: 3.38468s; font-size: 41.3317px;">💮</div><div class="flower" style="left: 8.17382vw; animation-duration: 8.84187s; animation-delay: 3.682s; font-size: 35.1853px;">🌺</div><div class="flower" style="left: 62.223vw; animation-duration: 11.8602s; animation-delay: 0.912849s; font-size: 25.6246px;">🌼</div><div class="flower" style="left: 36.4957vw; animation-duration: 11.9109s; animation-delay: 5.41434s; font-size: 44.4275px;">🌺</div><div class="flower" style="left: 67.5818vw; animation-duration: 11.0441s; animation-delay: 2.8744s; font-size: 54.1713px;">🌺</div><div class="flower" style="left: 49.2864vw; animation-duration: 8.02655s; animation-delay: 5.38292s; font-size: 47.5892px;">💮</div><div class="flower" style="left: 62.0978vw; animation-duration: 13.1427s; animation-delay: 4.37606s; font-size: 51.2497px;">💮</div><div class="flower" style="left: 59.4965vw; animation-duration: 5.37178s; animation-delay: 5.74729s; font-size: 52.9804px;">💮</div><div class="flower" style="left: 98.0217vw; animation-duration: 13.2166s; animation-delay: 2.94233s; font-size: 31.6181px;">🌹</div><div class="flower" style="left: 73.3324vw; animation-duration: 11.8818s; animation-delay: 0.950048s; font-size: 22.5517px;">💮</div><div class="flower" style="left: 27.0886vw; animation-duration: 7.07558s; animation-delay: 5.98346s; font-size: 45.3443px;">🌼</div><div class="flower" style="left: 10.9739vw; animation-duration: 13.045s; animation-delay: 7.54643s; font-size: 32.2998px;">🌺</div><div class="flower" style="left: 58.657vw; animation-duration: 5.80408s; animation-delay: 5.48914s; font-size: 41.0357px;">🌼</div><div class="flower" style="left: 6.04039vw; animation-duration: 10.5462s; animation-delay: 1.32761s; font-size: 22.2177px;">🌺</div><div class="flower" style="left: 99.1151vw; animation-duration: 11.9151s; animation-delay: 0.392361s; font-size: 52.6988px;">🌼</div><div class="flower" style="left: 35.4607vw; animation-duration: 7.02925s; animation-delay: 1.72934s; font-size: 40.1882px;">🌷</div><div class="flower" style="left: 73.8314vw; animation-duration: 8.85007s; animation-delay: 1.05524s; font-size: 25.172px;">🌷</div><div class="flower" style="left: 71.6202vw; animation-duration: 13.2978s; animation-delay: 7.76085s; font-size: 42.1852px;">🌺</div><div class="flower" style="left: 11.8948vw; animation-duration: 14.0717s; animation-delay: 0.536953s; font-size: 50.1161px;">💮</div>
+
+
+<div class="bubu" title="Bubu Bear">🧸💖</div>
+</body></html>

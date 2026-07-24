@@ -186,12 +186,16 @@ for(let i=0;i<120;i++){
 <audio id="music" preload="auto" loop>
     <source src="Valentine.mp3" type="audio/mpeg">
 </audio>
-    <script>
-document.addEventListener("click", function () {
-    const music = document.getElementById("music");
-    music.volume = 0.4;
+   <script>
+const music = document.getElementById("music");
 
-    music.play().catch(err => console.log(err));
-}, { once: true });
+function startMusic() {
+    music.volume = 0.4;
+    music.play().catch(console.error);
+
+    document.removeEventListener("pointerdown", startMusic);
+}
+
+document.addEventListener("pointerdown", startMusic);
 </script>
 </body></html>
